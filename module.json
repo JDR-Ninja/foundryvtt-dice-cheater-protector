@@ -2,13 +2,25 @@
 	"name": "dice-cheater-protector",
 	"title": "Dice Cheater Protector",
 	"description": "Freeze the dice class to prevent any modification",
-	"author": "Miguel Therriault",
-	"version": "0.1.0",
+	"author": "JDR Ninja",
+	"version": "0.1.1",
 	"minimumCoreVersion": "0.7.0",
-	"compatibleCoreVersion": "0.7.9",
+	"compatibleCoreVersion": "0.8.8",
 	"esmodules": [ "main.js" ],
 	"socket": false,
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		},
+		{
+			"lang": "fr",
+			"name": "Français",
+			"path": "lang/fr.json"
+		}
+	],
 	"url": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector",
-	"download": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/releases/download/0.1.0/dice-cheater-protector.zip",
+	"download": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/releases/download/0.1.1/dice-cheater-protector.zip",
 	"manifest": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/releases/download/latest/module.json"
 }

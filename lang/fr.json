@@ -1,0 +1,14 @@
+{
+  "dcp": {
+    "settings": {
+      "usecrypto": {
+        "name": "Utiliser Web Crypto API",
+        "hint": "Utiliser le module de cryptographie du navigateur internet au lieu de Mersenne Twister (1997) pour les jets de dés"
+      },
+      "onlyforplayer": {
+        "name": "Seulement pour les joueurs",
+        "hint": " Protège le générateur de nombre aléatoire pour les joueurs seulement"
+      }
+    }
+  }
+}

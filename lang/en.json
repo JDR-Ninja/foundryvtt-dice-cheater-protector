@@ -1,0 +1,14 @@
+{
+  "dcp": {
+    "settings": {
+      "usecrypto": {
+        "name": "Use Web Crypto API",
+        "hint": "Use the modern cryptography module available in browsers instead of Mersenne Twister (1997) for dice results."
+      },
+      "onlyforplayer": {
+        "name": "Only for player",
+        "hint": "Protect the dice random generator only for players"
+      }
+    }
+  }
+}
