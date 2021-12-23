@@ -1,13 +1,22 @@
 {
   "dcp": {
+    "Normal": "Normal",
+    "Minimal": "Min",
+    "Maximal": "Max",
+    "Low": "Bas",
+    "High": "Haut",
     "settings": {
       "usecrypto": {
         "name": "Utiliser Web Crypto API",
-        "hint": "Utiliser le module de cryptographie du navigateur internet au lieu de Mersenne Twister (1997) pour les jets de dÈs"
+        "hint": "Utiliser le module de cryptographie du navigateur internet au lieu de Mersenne Twister (1997) pour les jets de d√©s"
       },
       "onlyforplayer": {
         "name": "Seulement pour les joueurs",
-        "hint": " ProtËge le gÈnÈrateur de nombre alÈatoire pour les joueurs seulement"
+        "hint": " Prot√®ge le g√©n√©rateur de nombre al√©atoire pour les joueurs seulement"
+      },
+      "enablefudgedice": {
+        "name": "Modifier les d√©es du MJ",
+        "hint": "Le MJ peut modifier sa 'chance' (r√©d√©marrage requis)"
       }
     }
   }
