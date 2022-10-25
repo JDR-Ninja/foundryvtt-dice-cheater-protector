@@ -1,0 +1,23 @@
+{
+	"dcp": {
+		"Normal": "Normal",
+		"Minimal": "Mín",
+		"Maximal": "Máx",
+		"Low": "Bajo",
+		"High": "Alto",
+		"settings": {
+			"usecrypto": {
+				"name": "Mejor RNG",
+				"hint": "Utilice una función personalizada para generar números aleatorios en lugar de Mersenne Twister (1997) para los resultados de los dados."
+			},
+			"onlyforplayer": {
+				"name": "Sólo para los jugadores",
+				"hint": "Proteger el generador aleatorio de dados sólo para los jugadores."
+			},
+			"enablefudgedice": {
+				"name": "Habilitar suerte",
+				"hint": "El maestro del juego puede modificar su suerte (Por favor, actualice su juego pulsando F5)."
+			}
+		}
+	}
+}
