@@ -1,4 +1,4 @@
-const modName = 'dice-cheater-protector';
+const modName = 'dice-rng-protector';
 const useCrypto = 'usecrypto';
 const onlyForPlayer = 'onlyforplayer';
 const enableFudgeDice = "enablefudgedice";

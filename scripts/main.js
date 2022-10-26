@@ -1,4 +1,4 @@
-import { Settings } from '/scripts/settings.js';
+import { Settings } from './settings.js';
 
 function getCryptoRandom() {
 	let buffer = new ArrayBuffer(8);
@@ -60,7 +60,7 @@ Hooks.on('renderSidebarTab', (app, html, data) => {
 	}
 
 	let $chat_form = html.find('#chat-form');
-	const template = 'modules/dice-cheater-protector/templates/tray.html';
+	const template = 'modules/dice-rng-protector/templates/tray.html';
 	const data_object = {};
 
 	renderTemplate(template, data_object).then(c => {
