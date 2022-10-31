@@ -1,0 +1,23 @@
+{
+	"dcp": {
+		"Normal": "Normal",
+		"Minimal": "Min",
+		"Maximal": "Max",
+		"Low": "Low",
+		"High": "High",
+		"settings": {
+			"usecrypto": {
+				"name": "Better RNG",
+				"hint": "Use a custom function to generate random numbers instead of Mersenne Twister (1997) for dice results."
+			},
+			"onlyforplayer": {
+				"name": "Only for player",
+				"hint": "Protect the dice random generator only for players."
+			},
+			"enablefudgedice": {
+				"name": "Enable Fudge",
+				"hint": "DM can modify his 'luck' (Please refresh your game by pressing F5)."
+			}
+		}
+	}
+}

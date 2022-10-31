@@ -1,0 +1,23 @@
+{
+	"dcp": {
+		"Normal": "Normal",
+		"Minimal": "Min",
+		"Maximal": "Max",
+		"Low": "Bas",
+		"High": "Haut",
+		"settings": {
+			"usecrypto": {
+				"name": "Meilleur RNG",
+				"hint": "Utiliser une fonction personnalisée pour générer des nombres aléatoires au lieu de Mersenne Twister (1997) pour les résultats des dés."
+			},
+			"onlyforplayer": {
+				"name": "Seulement pour les joueurs",
+				"hint": "Protège le générateur de nombre aléatoire pour les joueurs seulement."
+			},
+			"enablefudgedice": {
+				"name": "Modifier les dées du MJ",
+				"hint": "Le MJ peut modifier sa 'chance' (Veuillez rafraîchir votre jeu en utilisant F5)."
+			}
+		}
+	}
+}

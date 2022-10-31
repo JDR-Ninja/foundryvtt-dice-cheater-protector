@@ -1,29 +1,45 @@
 {
-	"name": "dice-cheater-protector",
-	"title": "Dice Cheater Protector",
-	"description": "Freeze the dice class to prevent any modification and add fudge for GM",
-	"author": "JDR Ninja",
-	"version": "0.1.3",
-	"minimumCoreVersion": "0.8.0",
-	"compatibleCoreVersion": "9",
-	"esmodules": [ "main.js" ],
-	"socket": false,
+	"id": "dice-rng-protector",
+	"title": "Dice RNG Protector",
+	"description": "Improves RNG and provides protection against common ways of cheating.",
+	"version": "0.1.4",
+	"compatibility": {
+		"minimum": 8,
+		"verified": 10.288,
+		"maximum": 10
+	},
+	"authors": [
+		{
+			"name": "JDR Ninja"
+		},
+		{
+			"name": "NotoriusNeo"
+		}
+	],
+	"esmodules": [
+		"/scripts/main.js"
+	],
+	"styles": [
+		"/styles/dcp.css"
+	],
 	"languages": [
 		{
 			"lang": "en",
 			"name": "English",
-			"path": "lang/en.json"
+			"path": "languages/en.json"
 		},
 		{
 			"lang": "fr",
 			"name": "Français",
-			"path": "lang/fr.json"
+			"path": "languages/fr.json"
+		},
+		{
+			"lang": "es",
+			"name": "Español",
+			"path": "languages/es.json"
 		}
 	],
-	"styles": [
-		"./css/dcp.css"
-	],
-	"url": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector",
-	"download": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/releases/download/0.1.3/dice-cheater-protector.zip",
-	"manifest": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/releases/download/latest/module.json"
+	"url": "https://github.com/NotoriusNeo/foundryvtt-dice-rng-protector",
+	"download": "",
+	"manifest": ""
 }
