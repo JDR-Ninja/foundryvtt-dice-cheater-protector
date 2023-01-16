@@ -7,6 +7,7 @@ It's easy to cheat your roll in Foundry with a little bit of JavaScript knowledg
 
 ### 0.1.4
 Migration to v10
+Thanks to NotoriusNeo for his work on the module
 
 Additions:
 * Spanish translation.
