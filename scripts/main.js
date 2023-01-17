@@ -12,22 +12,18 @@ function getCryptoRandom() {
 
 // Generates random number with fudge factor based on the current settings
 function getRandom() {
-	switch(Settings.fudgeValue) {
-	case "MINIMAL": return 0.001;
-	case "MAXIMAL": return 1;
-	case "HIGH": 
-      // Generates a high fudge factor
-		if (Math.random() < 0.49 && Math.random() >= 0.5) {
-			return 2 * Math.random();
-		}
-		break;
-	case "LOW": 
-      // Generates a low fudge factor
-		if (Math.random() > 0.49 && Math.random() >= 0.5) {
-			return Math.random() / 2;
-		}
-		break;
-	default: return Math.random();
+	let r = getCryptoRandom();
+	switch (Settings.fudgeValue) {
+	case "MINIMAL":
+		return 0.001;
+	case "MAXIMAL":
+		return 1;
+	case "HIGH":
+		return r < 0.49 && getCryptoRandom() >= 0.5 ? r * 2 : r;
+	case "LOW":
+		return r > 0.49 && getCryptoRandom() >= 0.5 ? r / 2 : r;
+	default:
+		return r;
 	}
 }
 
@@ -36,9 +32,9 @@ Hooks.once('init', () => {
 });
 
 Hooks.once('ready', () => {
-  // Use getRandom() or getCryptoRandom() based on settings
+	// Use getRandom() or getCryptoRandom() based on settings
 	CONFIG.Dice.randomUniform = (Settings.getEnableFudgeDice()) ? getRandom : getCryptoRandom;
-  // Freeze the Dice class for players to avoid modification (harder to cheat)
+	// Freeze the Dice class for players to avoid modification (harder to cheat)
 	if (!Settings.getOnlyForPlayer() || !game.user.isGM) {
 		Object.freeze(CONFIG.Dice);
 	}
@@ -54,7 +50,7 @@ Hooks.on('renderSidebarTab', (app, html, data) => {
 		if (content.length > 0) {
 			let $content = $(content);
 			$chatForm.after($content);
-      // Update fudge factor setting when a radio button is clicked
+			// Update fudge factor setting when a radio button is clicked
 			$content.find("input[type='radio']").on('click', event => {
 				let value = $(event.currentTarget).attr('value');
 				Settings.fudgeValue = value;
