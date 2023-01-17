@@ -1,5 +1,4 @@
 import { Settings } from './settings.js';
-
 // Generates random number using a cryptographic method
 function getCryptoRandom() {
 	let buffer = new ArrayBuffer(8);
@@ -9,7 +8,6 @@ function getCryptoRandom() {
 	ints[6] |= 0xf0;
 	return new DataView(buffer).getFloat64(0, true) - 1;
 }
-
 // Generates random number with fudge factor based on the current settings
 function getRandom() {
 	let r = getCryptoRandom();
@@ -26,11 +24,9 @@ function getRandom() {
 		return r;
 	}
 }
-
 Hooks.once('init', () => {
 	Settings.registerSettings();
 });
-
 Hooks.once('ready', () => {
 	// Use getRandom() or getCryptoRandom() based on settings
 	CONFIG.Dice.randomUniform = (Settings.getEnableFudgeDice()) ? getRandom : getCryptoRandom;
@@ -39,10 +35,8 @@ Hooks.once('ready', () => {
 		Object.freeze(CONFIG.Dice);
 	}
 });
-
 Hooks.on('renderSidebarTab', (app, html, data) => {
 	if (!game.user.isGM || !Settings.getEnableFudgeDice()) return;
-	
 	let $chatForm = html.find('#chat-form');
 	const template = 'modules/dice-rng-protector/templates/tray.html';
 	const dataObject = {};

@@ -6,7 +6,7 @@ const settings = {
 		scope: 'world',
 		config: true,
 		type: Boolean,
-	default: true
+		default: true
 	},
 	onlyforplayer: {
 		name: 'dcp.settings.onlyforplayer.name',
@@ -14,7 +14,7 @@ const settings = {
 		scope: 'world',
 		config: true,
 		type: Boolean,
-	default: false
+		default: false
 	},
 	enablefudgedice: {
 		name: 'dcp.settings.enablefudgedice.name',
@@ -22,27 +22,22 @@ const settings = {
 		scope: 'world',
 		config: true,
 		type: Boolean,
-	default: false
+		default: false
 	}
 }
-
 export class Settings {
 	static fudgeValue = 'NORMAL';
-	
 	static getUseCrypto() {
 		return game.settings.get(modName, 'usecrypto');
 	}
-
 	static getOnlyForPlayer() {
 		return game.settings.get(modName, 'onlyforplayer');
 	}
-
 	static getEnableFudgeDice() {
 		return game.settings.get(modName, 'enablefudgedice');
 	}
-
 	static registerSettings() {
-		for(const [name, setting] of Object.entries(settings)){
+		for (const [name, setting] of Object.entries(settings)) {
 			game.settings.register(modName, name, setting);
 		}
 	}
