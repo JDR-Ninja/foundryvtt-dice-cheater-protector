@@ -5,6 +5,15 @@ It's easy to cheat your roll in Foundry with a little bit of JavaScript knowledg
 
 ## Changelog
 
+### 0.2
+🚀Lots of Optimizations!
+
+* Changed the way the settings are retrieved, now the method gets the key of the setting and use it to retrieve it.
+* Replaced Settings.getEnableFudgeDice() and Settings.getUseCrypto() with a ternary operator, making the code more concise.
+* Replaced the if statement that checks for the value of Settings.fudgeValue with a switch statement, which makes it more readable and efficient.
+* Replaced the individual calls to game.settings.register for each setting with a single object that contains all the settings and a loop that iterates over the object's properties and registers them. This reduces the amount of duplicated code and makes it easier to add new settings.
+
+
 ### 0.1.4
 Migration to v10
 Thanks to NotoriusNeo for his work on the module
