@@ -5,6 +5,9 @@ It's easy to cheat your roll in Foundry with a little bit of JavaScript knowledg
 
 ## Changelog
 
+### 0.2.1
+* Version bump to support FoundryVTT V11.299
+
 ### 0.2
 🚀Lots of Optimizations!
 
