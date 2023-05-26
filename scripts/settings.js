@@ -1,61 +1,44 @@
 const modName = 'dice-rng-protector';
-const useCrypto = 'usecrypto';
-const onlyForPlayer = 'onlyforplayer';
-const enableFudgeDice = "enablefudgedice";
-
+const settings = {
+	usecrypto: {
+		name: 'dcp.settings.usecrypto.name',
+		hint: 'dcp.settings.usecrypto.hint',
+		scope: 'world',
+		config: true,
+		type: Boolean,
+		default: true
+	},
+	onlyforplayer: {
+		name: 'dcp.settings.onlyforplayer.name',
+		hint: 'dcp.settings.onlyforplayer.hint',
+		scope: 'world',
+		config: true,
+		type: Boolean,
+		default: false
+	},
+	enablefudgedice: {
+		name: 'dcp.settings.enablefudgedice.name',
+		hint: 'dcp.settings.enablefudgedice.hint',
+		scope: 'world',
+		config: true,
+		type: Boolean,
+		default: false
+	}
+}
 export class Settings {
-
 	static fudgeValue = 'NORMAL';
-
 	static getUseCrypto() {
-		return game.settings.get(modName, useCrypto);
+		return game.settings.get(modName, 'usecrypto');
 	}
-
 	static getOnlyForPlayer() {
-		return game.settings.get(modName, onlyForPlayer);
+		return game.settings.get(modName, 'onlyforplayer');
 	}
-
 	static getEnableFudgeDice() {
-		return game.settings.get(modName, enableFudgeDice);
+		return game.settings.get(modName, 'enablefudgedice');
 	}
-
 	static registerSettings() {
-		// https://foundryvtt.com/api/ClientSettings.html#register
-
-		game.settings.register(modName, useCrypto, {
-			name: 'dcp.settings.usecrypto.name',
-			hint: 'dcp.settings.usecrypto.hint',
-			scope: 'world',
-			config: true,
-			type: Boolean,
-			default: true
-		});
-
-		game.settings.register(modName, onlyForPlayer, {
-			name: 'dcp.settings.onlyforplayer.name',
-			hint: 'dcp.settings.onlyforplayer.hint',
-			scope: 'world',
-			config: true,
-			type: Boolean,
-			default: false
-		});
-
-		game.settings.register(modName, onlyForPlayer, {
-			name: 'dcp.settings.onlyforplayer.name',
-			hint: 'dcp.settings.onlyforplayer.hint',
-			scope: 'world',
-			config: true,
-			type: Boolean,
-			default: false
-		});
-
-		game.settings.register(modName, enableFudgeDice, {
-			name: 'dcp.settings.enablefudgedice.name',
-			hint: 'dcp.settings.enablefudgedice.hint',
-			scope: 'world',
-			config: true,
-			type: Boolean,
-			default: false
-		});
+		for (const [name, setting] of Object.entries(settings)) {
+			game.settings.register(modName, name, setting);
+		}
 	}
 }
