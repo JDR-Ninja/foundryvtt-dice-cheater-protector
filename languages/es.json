@@ -5,18 +5,33 @@
 		"Maximal": "Máx",
 		"Low": "Bajo",
 		"High": "Alto",
+		"DiceStatistics": "Estadísticas de dados",
+		"FudgePool": "Reserva de azar",
+		"FudgeClear": "Limpia la reserva de suerte",
 		"settings": {
-			"usecrypto": {
-				"name": "Mejor RNG",
-				"hint": "Utilice una función personalizada para generar números aleatorios en lugar de Mersenne Twister (1997) para los resultados de los dados."
-			},
 			"onlyforplayer": {
 				"name": "Sólo para los jugadores",
 				"hint": "Proteger el generador aleatorio de dados sólo para los jugadores."
 			},
 			"enablefudgedice": {
-				"name": "Habilitar suerte",
-				"hint": "El maestro del juego puede modificar su suerte (Por favor, actualice su juego pulsando F5)."
+				"name": "Habilitar suerte para El maestro",
+				"hint": "El maestro del juego puede modificar su suerte."
+			},
+			"enablefudgediceforassistant": {
+				"name": "Habilitar suerte para El asistente",
+				"hint": "El assistant del juego puede modificar su suerte."
+			},
+			"enablefudgedicepool": {
+				"name": "Activa el grupo de suerte para El maestro.",
+				"hint": "El maestro puede modificar su reserva de suerte."
+			},
+			"enablefudgedicepoolforassistant": {
+				"name": "Activa el grupo de suerte para El assistant.",
+				"hint": "El assistant puede modificar su reserva de suerte."
+			},
+			"poolsize": {
+				"name": "Capacidad de la tabla de valores.",
+				"hint": "Para mejorar el rendimiento, genera una serie de números y la regenera según sea necesario."
 			}
 		}
 	}

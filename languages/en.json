@@ -5,18 +5,33 @@
 		"Maximal": "Max",
 		"Low": "Low",
 		"High": "High",
+		"DiceStatistics": "Dice Statistics",
+		"FudgePool": "Fudge Pool",
+		"FudgeClear": "Clear Fudge Pool",
 		"settings": {
-			"usecrypto": {
-				"name": "Better RNG",
-				"hint": "Use a custom function to generate random numbers instead of Mersenne Twister (1997) for dice results."
-			},
 			"onlyforplayer": {
 				"name": "Only for player",
 				"hint": "Protect the dice random generator only for players."
 			},
 			"enablefudgedice": {
-				"name": "Enable Fudge",
-				"hint": "DM can modify his 'luck' (Please refresh your game by pressing F5)."
+				"name": "Fudge for Game Master",
+				"hint": "Game Master can modify his 'luck'."
+			},
+			"enablefudgediceforassistant": {
+				"name": "Fudge for Assistant GM",
+				"hint": "Assistant GM can modify his 'luck'."
+			},
+			"enablefudgedicepool": {
+				"name": "Fudge reserve for the GM",
+				"hint": "The GM can modify his Fudge pool."
+			},
+			"enablefudgedicepoolforassistant": {
+				"name": "Fudge reserve for the Assistant GM",
+				"hint": "The Assistant GM can modify his Fudge pool."
+			},
+			"poolsize": {
+				"name": "Capacity of the pool",
+				"hint": "For performance, generates an array of random numbers and regenerates it as needed"
 			}
 		}
 	}

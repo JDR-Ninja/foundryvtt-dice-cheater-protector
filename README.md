@@ -5,6 +5,15 @@ It's easy to cheat your roll in Foundry with a little bit of JavaScript knowledg
 
 ## Changelog
 
+### 0.2.4
+* Version bump to support FoundryVTT V12.331
+* Force crypto numbers generator
+* Added a value table to improve performance
+* Code refactoring
+* Fudge : Better algorithm for high and low values
+* Fudge Pool
+* Many other changes.
+
 ### 0.2.1
 * Version bump to support FoundryVTT V11.299
 
@@ -15,7 +24,6 @@ It's easy to cheat your roll in Foundry with a little bit of JavaScript knowledg
 * Replaced Settings.getEnableFudgeDice() and Settings.getUseCrypto() with a ternary operator, making the code more concise.
 * Replaced the if statement that checks for the value of Settings.fudgeValue with a switch statement, which makes it more readable and efficient.
 * Replaced the individual calls to game.settings.register for each setting with a single object that contains all the settings and a loop that iterates over the object's properties and registers them. This reduces the amount of duplicated code and makes it easier to add new settings.
-
 
 ### 0.1.4
 Migration to v10

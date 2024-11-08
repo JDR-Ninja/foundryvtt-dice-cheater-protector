@@ -2,13 +2,10 @@
 	"id": "dice-rng-protector",
 	"title": "Dice RNG Protector",
 	"description": "Improves RNG and provides protection against common ways of cheating.",
-	"version": "0.2.3",
-	"minimumCoreVersion": "0.6.5",
-	"compatibleCoreVersion": "11",
+	"version": "0.2.4",
 	"compatibility": {
-		"minimum": "0.6.5",
-		"verified": 11.299,
-		"maximum": 11
+		"minimum": "12",
+		"verified": 12.331
 	},
 	"authors": [
 		{
@@ -41,7 +38,9 @@
 			"path": "languages/es.json"
 		}
 	],
-	"url": "https://github.com/NotoriusNeo/foundryvtt-dice-rng-protector",
-	"download": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/releases/download/0.2.3/dice-rng-protector.zip",
-	"manifest": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/releases/download/latest/module.json"
+	"url": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector",
+	"download": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/releases/download/0.2.4/dice-rng-protector.zip",
+	"manifest": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/releases/download/latest/module.json",
+	"bugs": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/issues",
+    "readme": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/blob/master/README.md"
 }

@@ -1,6 +1,12 @@
 .dcp-tray {
     flex: 0;
-    margin: 0 6px 6px;
+    margin: 0 6px;
+    flex-wrap: nowrap;
+}
+
+.dcp-tray.title {
+    justify-content: center;
+    margin-bottom: 0;
 }
 
     .dcp-tray input {
@@ -15,11 +21,9 @@
     .dcp-tray label {
         background-color: #e4e4e4;
         color: rgba(0, 0, 0, 0.6);
-        font-size: 14px;
-        line-height: 1;
+        font-size: var(--font-size-18);
         text-align: center;
-        padding: 0 8px;
-        margin-right: -1px;
+        padding: 3px 8px;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
         transition: all 0.1s ease-in-out;
@@ -40,4 +44,24 @@
 
     .dcp-tray label:last-of-type {
         border-radius: 0 4px 4px 0;
+    }
+
+    .dcp-tray button {
+        background-color: #e4e4e4;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: var(--font-size-18);
+        text-align: center;
+        padding: 3px 8px 0;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+        transition: all 0.1s ease-in-out;
+    }
+
+    .dcp-tray button:hover {
+        border-color: #ff6400;
+        box-shadow: 0 0 6px inset #ff6400;
+    }
+
+    .dcp-tray i {
+        margin: 0;
     }

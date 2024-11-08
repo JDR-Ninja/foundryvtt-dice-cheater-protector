@@ -1,12 +1,24 @@
-<section class="dcp-tray">
+<div class="dcp-tray flexrow title">=== {{localize "dcp.DiceStatistics"}} ===</div>
+<section class="dcp-tray flexrow">
     <input type="radio" id="dcp-dice-min" name="switch-two" value="MINIMAL" />
-    <label for="dcp-dice-min">{{localize "dcp.Minimal"}}</label>
+    <label for="dcp-dice-min" title="{{localize "dcp.Minimal"}}"><i class="fas fa-tachometer-slowest"></i></label>
     <input type="radio" id="dcp-dice-low" name="switch-two" value="LOW" />
-    <label for="dcp-dice-low">{{localize "dcp.Low"}}</label>
+    <label for="dcp-dice-low" title="{{localize "dcp.Low"}}"><i class="fas fa-tachometer-slow"></i></label>
     <input type="radio" id="dcp-dice-normal" name="switch-two" value="NORMAL" checked />
-    <label for="dcp-dice-normal">{{localize "dcp.Normal"}}</label>
+    <label for="dcp-dice-normal" title="{{localize "dcp.Normal"}}"><i class="fas fa-tachometer-average"></i></label>
     <input type="radio" id="dcp-dice-high" name="switch-two" value="HIGH" />
-    <label for="dcp-dice-high">{{localize "dcp.High"}}</label>
+    <label for="dcp-dice-high" title="{{localize "dcp.High"}}"><i class="fas fa-tachometer-fast"></i></label>
     <input type="radio" id="dcp-dice-max" name="switch-two" value="MAXIMAL" />
-    <label for="dcp-dice-max">{{localize "dcp.Maximal"}}</label>
+    <label for="dcp-dice-max" title="{{localize "dcp.Maximal"}}"><i class="fas fa-tachometer-fastest"></i></label>
 </section>
+{{#if config.enableFudgePool}}
+<div class="dcp-tray flexrow title">=== {{localize "dcp.FudgePool"}} ===</div>
+<section class="dcp-tray flexrow">
+    <button class="dcp-fudge" data-fudge="MINIMAL" title="{{localize "dcp.Minimal"}}"><i class="fas fa-tachometer-slowest"></i></button>
+    <button class="dcp-fudge" data-fudge="LOW" title="{{localize "dcp.Low"}}"><i class="fas fa-tachometer-slow"></i></button>
+    <button class="dcp-fudge" data-fudge="NORMAL" title="{{localize "dcp.Normal"}}"><i class="fas fa-tachometer-average"></i></button>
+    <button class="dcp-fudge" data-fudge="HIGH" title="{{localize "dcp.High"}}"><i class="fas fa-tachometer-fast"></i></button>
+    <button class="dcp-fudge" data-fudge="MAXIMAL" title="{{localize "dcp.Maximal"}}"><i class="fas fa-tachometer-fastest"></i></button>
+    <button class="dcp-fudge" data-fudge-clear="" title="{{localize "dcp.FudgeClear"}}"><i class="fas fa-trash"></i></button>
+</section>
+{{/if}}
