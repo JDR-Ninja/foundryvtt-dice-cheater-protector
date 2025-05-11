@@ -37,7 +37,7 @@
     ],
     "socket": true,
     "url": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector",
-    "download": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/releases/download/0.3.0/module.zip",
+    "download": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/releases/download/0.3.0/dice-rng-protector.zip",
     "manifest": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/releases/latest/download/module.json",
     "bugs": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/issues",
     "readme": "https://github.com/JDR-Ninja/foundryvtt-dice-cheater-protector/blob/master/README.md"
