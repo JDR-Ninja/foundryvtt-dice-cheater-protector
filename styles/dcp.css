@@ -1,12 +1,14 @@
 .dcp-tray {
-    flex: 0;
-    margin: 0 6px;
-    flex-wrap: nowrap;
-}
-
-.dcp-tray.title {
-    justify-content: center;
-    margin-bottom: 0;
+    margin-top: -6px;
+    width: var(--sidebar-width);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-inline: var(--chat-message-spacing);
+    pointer-events: all;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-grow: 0;
 }
 
     .dcp-tray input {
@@ -19,23 +21,31 @@
     }
 
     .dcp-tray label {
-        background-color: #e4e4e4;
-        color: rgba(0, 0, 0, 0.6);
         font-size: var(--font-size-18);
         text-align: center;
-        padding: 3px 8px;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
         transition: all 0.1s ease-in-out;
+        color: var(--color-light-2);
+        box-shadow: 0 0 6px inset #8d9ea7;
+        padding: 0;
+        min-height: 1rem;
+        border: 1px solid #000;
+        height: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
     }
 
         .dcp-tray label:hover {
             cursor: pointer;
+            background: var(--color-cool-5);
+            border-color: #ff6400;
+            box-shadow: 0 0 6px inset var(--color-warm-2);
         }
 
     .dcp-tray input:checked + label {
-        background-color: #a5dc86;
-        box-shadow: none;
+        color: #ff6400;
     }
 
     .dcp-tray label:first-of-type {
@@ -47,14 +57,15 @@
     }
 
     .dcp-tray button {
-        background-color: #e4e4e4;
-        color: rgba(0, 0, 0, 0.6);
         font-size: var(--font-size-18);
         text-align: center;
-        padding: 3px 8px 0;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
         transition: all 0.1s ease-in-out;
+        color: var(--color-light-2);
+        box-shadow: 0 0 6px inset #8d9ea7;
+        padding: 0;
+        min-height: 1rem;
+        border: 1px solid #000;
+        flex: 1;
     }
 
     .dcp-tray button:hover {
@@ -62,6 +73,40 @@
         box-shadow: 0 0 6px inset #ff6400;
     }
 
+    .dcp-tray button:focus {
+        outline:none;
+        border:none;
+    }
+
     .dcp-tray i {
         margin: 0;
     }
+
+    .dcp-tray .checkbox-icon {
+        position: relative;
+        cursor: pointer;
+        font-size: 24px;
+      }
+      
+      .dcp-tray .checkbox-icon input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      .dcp-tray .checkbox-icon .unchecked {
+        display: inline;
+      }
+      
+      .dcp-tray .checkbox-icon .checked {
+        display: none;
+      }
+      
+      .dcp-tray .checkbox-icon input:checked ~ .unchecked {
+        display: none;
+      }
+      
+      .dcp-tray .checkbox-icon input:checked ~ .checked {
+        display: inline;
+      }

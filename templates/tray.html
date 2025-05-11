@@ -1,24 +1,27 @@
-<div class="dcp-tray flexrow title">=== {{localize "dcp.DiceStatistics"}} ===</div>
-<section class="dcp-tray flexrow">
+<section class="dcp-tray">
     <input type="radio" id="dcp-dice-min" name="switch-two" value="MINIMAL" />
-    <label for="dcp-dice-min" title="{{localize "dcp.Minimal"}}"><i class="fas fa-tachometer-slowest"></i></label>
+    <label for="dcp-dice-min" title="{{localize "dcp.SetLuckToMinimal"}}"><i class="fa-solid fa-gauge-simple-min"></i></label>
     <input type="radio" id="dcp-dice-low" name="switch-two" value="LOW" />
-    <label for="dcp-dice-low" title="{{localize "dcp.Low"}}"><i class="fas fa-tachometer-slow"></i></label>
+    <label for="dcp-dice-low" title="{{localize "dcp.SetLuckToLow"}}"><i class="fa-solid fa-gauge-simple-low"></i></label>
     <input type="radio" id="dcp-dice-normal" name="switch-two" value="NORMAL" checked />
-    <label for="dcp-dice-normal" title="{{localize "dcp.Normal"}}"><i class="fas fa-tachometer-average"></i></label>
+    <label for="dcp-dice-normal" title="{{localize "dcp.SetLuckToNormal"}}"><i class="fa-solid fa-gauge-simple"></i></label>
     <input type="radio" id="dcp-dice-high" name="switch-two" value="HIGH" />
-    <label for="dcp-dice-high" title="{{localize "dcp.High"}}"><i class="fas fa-tachometer-fast"></i></label>
+    <label for="dcp-dice-high" title="{{localize "dcp.SetLuckToHigh"}}"><i class="fa-solid fa-gauge-simple-high"></i></label>
     <input type="radio" id="dcp-dice-max" name="switch-two" value="MAXIMAL" />
-    <label for="dcp-dice-max" title="{{localize "dcp.Maximal"}}"><i class="fas fa-tachometer-fastest"></i></label>
+    <label for="dcp-dice-max" title="{{localize "dcp.SetLuckToMaximal"}}"><i class="fa-solid fa-gauge-simple-max"></i></label>
+    <label class="checkbox-icon" title="{{localize "dcp.NotSyncWithPlayer"}}">
+        <input type="checkbox" id="dcp-sync" />
+        <i class="fa-solid fa-signal-stream-slash unchecked"></i>
+        <i class="fa-solid fa-signal-stream checked"></i>
+      </label>
 </section>
 {{#if config.enableFudgePool}}
-<div class="dcp-tray flexrow title">=== {{localize "dcp.FudgePool"}} ===</div>
-<section class="dcp-tray flexrow">
-    <button class="dcp-fudge" data-fudge="MINIMAL" title="{{localize "dcp.Minimal"}}"><i class="fas fa-tachometer-slowest"></i></button>
-    <button class="dcp-fudge" data-fudge="LOW" title="{{localize "dcp.Low"}}"><i class="fas fa-tachometer-slow"></i></button>
-    <button class="dcp-fudge" data-fudge="NORMAL" title="{{localize "dcp.Normal"}}"><i class="fas fa-tachometer-average"></i></button>
-    <button class="dcp-fudge" data-fudge="HIGH" title="{{localize "dcp.High"}}"><i class="fas fa-tachometer-fast"></i></button>
-    <button class="dcp-fudge" data-fudge="MAXIMAL" title="{{localize "dcp.Maximal"}}"><i class="fas fa-tachometer-fastest"></i></button>
+<section class="dcp-tray">
+    <button class="dcp-fudge" data-fudge="MINIMAL" title="{{localize "dcp.AddMinimalLuckToPool"}}"><i class="fa-solid fa-gauge-min"></i></button>
+    <button class="dcp-fudge" data-fudge="LOW" title="{{localize "dcp.AddLowLuckToPool"}}"><i class="fa-solid fa-gauge-low"></i></button>
+    <button class="dcp-fudge" data-fudge="NORMAL" title="{{localize "dcp.AddNormalLuckToPool"}}"><i class="fa-solid fa-gauge"></i></button>
+    <button class="dcp-fudge" data-fudge="HIGH" title="{{localize "dcp.AddHighLuckToPool"}}"><i class="fa-solid fa-gauge-high"></i></button>
+    <button class="dcp-fudge" data-fudge="MAXIMAL" title="{{localize "dcp.AddMaximalLuckToPool"}}"><i class="fa-solid fa-gauge-max"></i></button>
     <button class="dcp-fudge" data-fudge-clear="" title="{{localize "dcp.FudgeClear"}}"><i class="fas fa-trash"></i></button>
 </section>
 {{/if}}

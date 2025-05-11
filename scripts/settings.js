@@ -1,4 +1,5 @@
-const modName = 'dice-rng-protector';
+export const MODULE_ID = 'dice-rng-protector';
+
 const settings = {
 	onlyforplayer: {
 		name: 'dcp.settings.onlyforplayer.name',
@@ -18,27 +19,18 @@ const settings = {
 		default: false,
         requiresReload: true
 	},
+	enabledicetray: {
+		name: 'dcp.settings.enabledicetray.name',
+		hint: 'dcp.settings.enabledicetray.hint',
+		scope: 'user',
+		config: true,
+		type: Boolean,
+		default: true,
+        requiresReload: true
+	},
 	enablefudgedicepool: {
 		name: 'dcp.settings.enablefudgedicepool.name',
 		hint: 'dcp.settings.enablefudgedicepool.hint',
-		scope: 'world',
-		config: true,
-		type: Boolean,
-		default: false,
-        requiresReload: true
-	},
-	enablefudgedicepoolforassistant: {
-		name: 'dcp.settings.enablefudgedicepoolforassistant.name',
-		hint: 'dcp.settings.enablefudgedicepoolforassistant.hint',
-		scope: 'world',
-		config: true,
-		type: Boolean,
-		default: false,
-        requiresReload: true
-	},
-	enablefudgediceforassistant: {
-		name: 'dcp.settings.enablefudgediceforassistant.name',
-		hint: 'dcp.settings.enablefudgediceforassistant.hint',
 		scope: 'world',
 		config: true,
 		type: Boolean,
@@ -58,40 +50,35 @@ const settings = {
 		},
 		default: 20,
         requiresReload: true
-	},
+	}
 }
 export class Settings {
 	static fudgeValue = 'NORMAL';
 	static getOnlyForPlayer() {
-		return game.settings.get(modName, 'onlyforplayer');
+		return game.settings.get(MODULE_ID, 'onlyforplayer');
 	}
 	static getEnableFudgeDice() {
-		return game.settings.get(modName, 'enablefudgedice');
+		return game.settings.get(MODULE_ID, 'enablefudgedice');
+	}
+	static getEnableDiceTray() {
+		return game.settings.get(MODULE_ID, 'enabledicetray');
 	}
 	static getEnableFudgeDicePool() {
-		return game.settings.get(modName, 'enablefudgedicepool');
-	}
-	static getEnableFudgeDicePoolForAssistant() {
-		return game.settings.get(modName, 'enablefudgedicepoolforassistant');
-	}
-	static getEnableFudgeDiceForAssistant() {
-		return game.settings.get(modName, 'enablefudgediceforassistant');
+		return game.settings.get(MODULE_ID, 'enablefudgedicepool');
 	}
 	static getPoolSize() {
-		return game.settings.get(modName, 'poolsize');
+		return game.settings.get(MODULE_ID, 'poolsize');
 	}
 	static registerSettings() {
 		for (const [name, setting] of Object.entries(settings)) {
-			game.settings.register(modName, name, setting);
+			game.settings.register(MODULE_ID, name, setting);
 		}
 	}
-	static isFudgeEnable() {
-		return (game.user.role === CONST.USER_ROLES.GAMEMASTER && Settings.getEnableFudgeDice()) ||
-				(game.user.role === CONST.USER_ROLES.ASSISTANT && Settings.getEnableFudgeDiceForAssistant());
+	static isLocalFudgeEnable() {
+		return game.user.role === CONST.USER_ROLES.GAMEMASTER && Settings.getEnableFudgeDice();;
 	}
 	
-	static isFudgePoolEnable() {
-		return (game.user.role === CONST.USER_ROLES.GAMEMASTER && Settings.getEnableFudgeDicePool()) ||
-				(game.user.role === CONST.USER_ROLES.ASSISTANT && Settings.getEnableFudgeDicePoolForAssistant());
+	static isLocalFudgePoolEnable() {
+		return game.user.role === CONST.USER_ROLES.GAMEMASTER && Settings.getEnableFudgeDicePool();
 	}
 }

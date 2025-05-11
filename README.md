@@ -4,6 +4,12 @@
 It's easy to cheat your roll in Foundry with a little bit of JavaScript knowledge. This module block the most common way to change the dice result.
 
 ## Changelog
+### 0.3.0
+* Support FoundryVTT V13.342
+* Add keybindings for Luck and Show/Hide dice tray
+* Add socket for sending Luck/Fudge to all players
+* Remove Assitance GM config
+* Rework UI
 
 ### 0.2.4
 * Version bump to support FoundryVTT V12.331

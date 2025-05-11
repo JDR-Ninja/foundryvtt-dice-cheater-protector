@@ -1,13 +1,26 @@
 {
 	"dcp": {
-		"Normal": "Normal",
-		"Minimal": "Mín",
-		"Maximal": "Máx",
-		"Low": "Bajo",
-		"High": "Alto",
-		"DiceStatistics": "Estadísticas de dados",
-		"FudgePool": "Reserva de azar",
+		"SetLuckToNormal": "Establecer Suerte Normal",
+		"SetLuckToMinimal": "Establecer Suerte Mínima",
+		"SetLuckToMaximal": "Establecer Suerte Máxima",
+		"SetLuckToLow": "Establecer Suerte Baja",
+		"SetLuckToHigh": "Establecer Suerte Alta",
+		"AddNormalLuckToPool": "Añadir Suerte Normal a la Reserva de Fudge",
+		"AddMinimalLuckToPool": "Añadir Suerte Mínima a la Reserva de Fudge",
+		"AddMaximalLuckToPool": "Añadir Suerte Máxima a la Reserva de Fudge",
+		"AddLowLuckToPool": "Añadir Suerte Baja a la Reserva de Fudge",
+		"AddHighLuckToPool": "Añadir Suerte Alta a la Reserva de Fudge",
 		"FudgeClear": "Limpia la reserva de suerte",
+		"SyncWithPlayer" : "Estado: Los jugadores están sincronizados",
+		"NotSyncWithPlayer" : "Estado: Solo local",
+		"keybindings": {
+			"minimal": "Establecer Fudge al mínimo",
+			"low": "Establecer Fudge al mínimo",
+			"normal": "Establecer Fudge al normal",
+			"high": "Establecer Fudge al máximo",
+			"maximal": "Establecer Fudge al máximo",
+			"toggledicetray": "Mostrar/Guardar la barra en el chat"
+		},
 		"settings": {
 			"onlyforplayer": {
 				"name": "Sólo para los jugadores",
@@ -17,17 +30,13 @@
 				"name": "Habilitar suerte para El maestro",
 				"hint": "El maestro del juego puede modificar su suerte."
 			},
-			"enablefudgediceforassistant": {
-				"name": "Habilitar suerte para El asistente",
-				"hint": "El assistant del juego puede modificar su suerte."
+			"enabledicetray": {
+				"name": "Habilitar bandeja de dados",
+				"hint": "Mostrar bandeja de dados en el registro de chat"
 			},
 			"enablefudgedicepool": {
 				"name": "Activa el grupo de suerte para El maestro.",
 				"hint": "El maestro puede modificar su reserva de suerte."
-			},
-			"enablefudgedicepoolforassistant": {
-				"name": "Activa el grupo de suerte para El assistant.",
-				"hint": "El assistant puede modificar su reserva de suerte."
 			},
 			"poolsize": {
 				"name": "Capacidad de la tabla de valores.",

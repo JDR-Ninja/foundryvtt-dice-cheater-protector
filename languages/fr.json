@@ -1,13 +1,26 @@
 {
 	"dcp": {
-		"Normal": "Normal",
-		"Minimal": "Min",
-		"Maximal": "Max",
-		"Low": "Bas",
-		"High": "Haut",
-		"DiceStatistics": "Statistique des dés",
-		"FudgePool": "Réserve de Chance",
+		"SetLuckToNormal": "Initialise la Chance à Normale",
+		"SetLuckToMinimal": "Initialise la Chance à Minimale",
+		"SetLuckToMaximal": "Initialise la Chance à Maximale",
+		"SetLuckToLow": "Initialise la Chance à Basse",
+		"SetLuckToHigh": "Initialise la Chance à Haute",
+		"AddNormalLuckToPool": "Ajoute une Chance Normal à la réserve",
+		"AddMinimalLuckToPool": "Ajoute une Chance Minimale à la réserve",
+		"AddMaximalLuckToPool": "Ajoute une Chance Maximale à la réserve",
+		"AddLowLuckToPool": "Ajoute une Chance Basse à la réserve",
+		"AddHighLuckToPool": "Ajoute une Chance Haute à la réserve",
 		"FudgeClear": "Efface la réserve de Chance",
+		"SyncWithPlayer" : "État : Synchroniser avec les joueurs",
+		"NotSyncWithPlayer" : "État : Local",
+		"keybindings": {
+			"minimal": "Met la 'Chance' à la valeur Minimale",
+			"low": "Met la 'Chance' à la valeur Basse",
+			"normal": "Met la 'Chance' à la valeur Normal",
+			"high": "Met la 'Chance' à la valeur Haute",
+			"maximal": "Met la 'Chance' à la valeur Maximale",
+			"toggledicetray" : "Affiche/Cache la barre dans le chat"
+		},
 		"settings": {
 			"onlyforplayer": {
 				"name": "Seulement pour les joueurs",
@@ -16,6 +29,10 @@
 			"enablefudgedice": {
 				"name": "Modifier la 'chance' du MJ",
 				"hint": "Le MJ peut modifier sa 'chance'."
+			},
+			"enabledicetray": {
+				"name": "Afficher les boutons",
+				"hint": "Affiche les boutons dans la barre de chat (voir les raccourcis clavier)"
 			},
 			"enablefudgediceforassistant": {
 				"name": "Modifier la 'chance' de l'Assitant MJ",
@@ -32,6 +49,10 @@
 			"poolsize": {
 				"name": "Capacité du tableau des valeurs",
 				"hint": "Pour la performance, génère un tableau de nombre aléatoire et le regénère au besoin."
+			},
+			"enablefudgebysocket": {
+				"name": "Active la centralisation des dés",
+				"hint": "Utilise l'instance du GM pour tous les lancers de dés."
 			}
 		}
 	}
